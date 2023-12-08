@@ -1,6 +1,6 @@
-<?php include '../header_ad.php' ?>
+<?php include 'header_ad.php' ?>
 <?php
-require_once "../../common/connect.php";
+require_once "../common/connect.php";
 
 $conn = connectDB();
 
@@ -59,4 +59,4 @@ if ($conn) {
             </div>
         </div>
     </main>
-    <?php include '../footer_ad.php' ?>
+    <?php include 'footer_ad.php' ?>

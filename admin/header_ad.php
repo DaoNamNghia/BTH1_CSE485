@@ -37,16 +37,16 @@
                         <a class="nav-link" aria-current="page" href="./">Trang chủ</a>
                     </li>
                     <li class="nav-item <?php echo (strpos($_SERVER['PHP_SELF'], 'category.php') !== false && strpos($_SERVER['PHP_SELF'], 'category.php') !== false) ? 'active fw-bold' : ''; ?>">
-                        <a class="nav-link" href="categories/category.php">Thể loại</a>
+                        <a class="nav-link" href="category.php">Thể loại</a>
                     </li>
                     <li class="nav-item <?php echo (strpos($_SERVER['PHP_SELF'], 'author.php') !== false) ? 'active fw-bold' : ''; ?>">
-                        <a class="nav-link" href="authors/author.php">Tác giả</a>
+                        <a class="nav-link" href="author.php">Tác giả</a>
                     </li>
                     <li class="nav-item <?php echo (strpos($_SERVER['PHP_SELF'], 'article.php') !== false) ? 'active fw-bold' : ''; ?>">
-                        <a class="nav-link" href="articles/article.php">Bài viết</a>
+                        <a class="nav-link" href="article.php">Bài viết</a>
                     </li>
                     <li class="nav-item <?php echo (strpos($_SERVER['PHP_SELF'], 'user.php') !== false) ? 'active fw-bold' : ''; ?>">
-                        <a class="nav-link" href="users/user.php">Người dùng</a>
+                        <a class="nav-link" href="user.php">Người dùng</a>
                     </li>
                     <li class="nav-item dropdown">
                             <span class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
