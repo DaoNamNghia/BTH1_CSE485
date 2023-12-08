@@ -18,6 +18,9 @@ if(isset($_POST['txtCatName'])) {
         }
         $stmt = $conn->prepare($sql);
         $stmt->execute();
+        session_start();
+        $_SESSION['notify_category_successfully'] = "Category saved successfully.";
+
 
         header('Location: category.php');
 

@@ -1,4 +1,4 @@
-<?php include '../header_ad.php' ?>
+<?php include 'header_ad.php' ?>
     <main class="container mt-5 mb-5">
         <!-- <h3 class="text-center text-uppercase mb-3 text-primary">CẢM NHẬN VỀ BÀI HÁT</h3> -->
         <div class="row">
@@ -18,4 +18,4 @@
             </div>
         </div>
     </main>
-<?php include '../footer_ad.php' ?>
+<?php include 'footer_ad.php' ?>

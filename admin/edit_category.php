@@ -1,7 +1,7 @@
-<?php include '../header_ad.php' ;
-            require_once "../../common/connect.php";
-if(isset($_POST['id'])){
-    $cateId = $_POST['id'];
+<?php include 'header_ad.php' ;
+            require_once "../common/connect.php";
+if(isset($_GET['id'])){
+    $cateId = $_GET['id'];
 
 }
 $conn = connectDB();
@@ -9,6 +9,7 @@ $conn = connectDB();
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $cate = $stmt->fetch();
+
 
 ?>
 
@@ -36,4 +37,4 @@ $conn = connectDB();
             </div>
         </div>
     </main>
-<?php include '../footer_ad.php' ?>
+<?php include 'footer_ad.php' ?>
