@@ -1,3 +1,6 @@
+<?php session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +13,7 @@
     <link rel="stylesheet" href="css/style_login.css">
 </head>
 <body>
+
 
 
 
@@ -33,13 +37,27 @@
                         <a class="nav-link" aria-current="page" href="./">Trang chủ</a>
                     </li>
                     <li class="nav-item <?php echo (strpos($_SERVER['PHP_SELF'], 'category.php') !== false && strpos($_SERVER['PHP_SELF'], 'category.php') !== false) ? 'active fw-bold' : ''; ?>">
-                        <a class="nav-link" href="category.php">Thể loại</a>
+                        <a class="nav-link" href="categories/category.php">Thể loại</a>
                     </li>
                     <li class="nav-item <?php echo (strpos($_SERVER['PHP_SELF'], 'author.php') !== false) ? 'active fw-bold' : ''; ?>">
-                        <a class="nav-link" href="author.php">Tác giả</a>
+                        <a class="nav-link" href="authors/author.php">Tác giả</a>
                     </li>
                     <li class="nav-item <?php echo (strpos($_SERVER['PHP_SELF'], 'article.php') !== false) ? 'active fw-bold' : ''; ?>">
-                        <a class="nav-link" href="article.php">Bài viết</a>
+                        <a class="nav-link" href="articles/article.php">Bài viết</a>
+                    </li>
+                    <li class="nav-item <?php echo (strpos($_SERVER['PHP_SELF'], 'user.php') !== false) ? 'active fw-bold' : ''; ?>">
+                        <a class="nav-link" href="users/user.php">Người dùng</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                            <span class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Hello, <?= $_SESSION['userActive']['full_name'] ?>
+                            </span>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="../handle_logout.php">Logout</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>

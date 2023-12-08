@@ -1,6 +1,8 @@
-<?php include 'common/header.php'  ?>
+<?php include 'common/header.php';
 
 ?>
+
+
 
 <main class="container-fluid mt-3">
 
@@ -26,7 +28,7 @@
                                 <img src="' . $story["hinhanh"] . '" class="card-img-top" style="max-height: 295px" alt="...">
                                 <div class="card-body" style="background-color: #fff">
                                     <h5 class="card-title text-center">
-                                        <a href="detail.php?id=' .$story["ma_bviet"].'" class="text-decoration-none">' . $story["tieude"] . '</a>
+                                        <a href="detail.php?id='.htmlspecialchars($story["ma_bviet"]).'" class="text-decoration-none">' . htmlspecialchars($story["tieude"]) . '</a>
                                     </h5>
                                 </div>
                             </div>

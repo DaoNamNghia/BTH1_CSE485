@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,9 +27,25 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="./">Trang chủ</a>
                     </li>
-                    <li class="nav-item">
+                    <?php if(!isset($_SESSION['userActive'])):  ?>
+                    <li  class="nav-item " >
                         <a class="nav-link" href="./login.php">Đăng nhập</a>
                     </li>
+                    <?php endif; ?>
+
+                    <?php if(isset($_SESSION['userActive'])):  ?>
+                        <li class="nav-item dropdown">
+                            <span class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Hello, <?= $_SESSION['userActive']['full_name'] ?>
+                            </span>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="handle_logout.php">Logout</a></li>
+                            </ul>
+                        </li>
+                    <?php endif;  ?>
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Nội dung cần tìm" aria-label="Search">

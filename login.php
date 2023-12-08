@@ -1,6 +1,12 @@
-<?php include 'common/header.php'  ?>
-
-
+<?php
+    include 'common/header.php';
+if(isset($_SESSION['notifyFailure'])) {
+    $notifyFailure = $_SESSION['notifyFailure'];
+    unset( $_SESSION['notifyFailure']);
+}else {
+    $notifyFailure = '';
+}
+?>
 
 <main class="container mt-5 mb-5">
         <!-- <h3 class="text-center text-uppercase mb-3 text-primary">CẢM NHẬN VỀ BÀI HÁT</h3> -->
@@ -15,7 +21,8 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <form action="hanle_login.php" method="post">
+                        <form action="handle_login.php" method="post">
+                            <p> <?=$notifyFailure?></p>
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="txtUser"><i class="fas fa-user"></i></span>
                                 <input type="text" class="form-control" placeholder="username" name="username" required>
