@@ -25,6 +25,14 @@ if ($conn) {
     </div>';
         unset($_SESSION['notify_category_successfully']);
     }
+
+    if (isset($_SESSION['notify_category_violation'])) {
+        echo '
+    <div class="alert alert-danger text-center" role="alert">
+        ' . $_SESSION['notify_category_violation'] . '
+    </div>';
+        unset($_SESSION['notify_category_violation']);
+    }
     ?>
         <!-- <h3 class="text-center text-uppercase mb-3 text-primary">CẢM NHẬN VỀ BÀI HÁT</h3> -->
         <div class="row">
